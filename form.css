@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+}
+
+.background {
+    background-image: url('form.png')!important; 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    animation: fadeIn 3s ease forwards;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Kaushan Script', cursive; /* Nuansa anime */
+    color: #FF79C6; /* Warna pink lembut */
+    text-shadow: 2px 2px #282A36;
+    padding-bottom: 20px;
+    animation: fadeInText 2s ease forwards;
+}
+
+.form-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 400px;
+    margin: 20px;
+    animation: fadeInText 2s ease forwards;
+    border: 5px solid #FF79C6; /* Highlight nuansa anime */
+}
+
+.form-group label {
+    font-size: 1rem;
+    font-family: 'Kaushan Script', cursive;
+    margin: 10px 0;
+    display: block;
+    color: #282A36; /* Kontras gelap */
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 25px;
+    font-size: 1rem;
+    border: 2px solid #FF79C6;
+    font-family: 'Roboto', sans-serif;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #FF79C6;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-family: 'Kaushan Script', cursive;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #FF6F91;
+    transform: translateY(-3px);
+}
+
+/* Animasi fade-in untuk seluruh elemen */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsiveness */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .form-container {
+        padding: 30px;
+    }
+
+    input, button {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .background {
+        justify-content: flex-start;
+        padding-top: 20px;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    .form-container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    input, button {
+        font-size: 0.9rem;
+    }
+}

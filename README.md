@@ -1,1 +1,3 @@
-# M.-Akbar-Resdika_121450066
+Nama : Ghozi Alvin Karim \
+Nim : 121450123 \
+Kelas : Pemrograman Web (RB)
